@@ -1,0 +1,55 @@
+.home {
+    margin: 11em 0 0 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+}
+
+img {
+    width: 20em;
+    max-width: 100%;
+    border-radius: 50%;
+}
+
+
+.text {
+    margin: 0 0 0 2em;
+    animation: slide-right 1s forwards;
+}
+
+p {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+h2 {
+    color: aqua;
+    font-size: 2em;
+}
+
+span {
+    font-weight: bold;
+    font-size: 0.9em;
+    border-bottom: 1px solid white;
+}
+
+@keyframes slide-right {
+    0% {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+}
