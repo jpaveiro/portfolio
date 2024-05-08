@@ -1,47 +1,47 @@
 .header {
-    background: linear-gradient(to right, rgb(33, 33, 33, 100), rgb(0, 105, 140));
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  background: linear-gradient(to right, rgb(33, 33, 33, 100), rgb(0, 105, 140));
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-  
+
 .header h1 {
-    color: #fff;
-    font-size: 2em;
+  color: #fff;
+  font-size: 2em;
 }
 
 .header h1:hover {
-    color: #00aeff;
-    transition: color 0.3s ease;
+  color: #00aeff;
+  transition: color 0.3s ease;
 }
-  
+
 .header ul {
-    list-style-type: none;
-    display: flex;
+  list-style-type: none;
+  display: flex;
 }
-  
+
 .header li {
-    font-size: 1.1em;
-    margin-right: 2em;
+  font-size: 1.1em;
+  margin-right: 2em;
 }
-  
+
 .header a {
-    color: #fff; 
-    text-decoration: none; 
-    transition: color 0.3s ease; 
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
-  
+
 .header a:hover {
-    color: #00aeff;
+  color: #00aeff;
 }
-  
+
 .footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background: linear-gradient(to right,black, rgb(55, 55, 55, 100));
-    color: #fff;
-    padding: 0.5em;
-    text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: linear-gradient(to right, black, rgb(55, 55, 55, 100));
+  color: #fff;
+  padding: 0.5em;
+  text-align: center;
 }
