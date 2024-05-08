@@ -1,55 +1,103 @@
 .home {
-    margin: 11em 0 0 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
+  margin: 11em 0 0 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
 
-.content {
-    display: flex;
-    align-items: center;
-}
+.helloworld {
+  display: flex;
+  align-items: center;
 
-img {
+  span {
+    font-weight: bold;
+    font-size: 0.9em;
+  }
+
+  img {
     width: 20em;
     max-width: 100%;
     border-radius: 50%;
-}
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  }
 
-
-.text {
+  .text {
     margin: 0 0 0 2em;
-    animation: slide-right 1s forwards;
-}
+  }
 
-p {
+  p {
     font-weight: bold;
     font-size: 1.5em;
+  }
+
+  .descricao {
+    padding-top: 0.5em;
+    border-top: 1px solid white;
+    margin: 0.8em 0 0 0;
+  }
+}
+
+.sobre-mim {
+  margin: 5em 0 0 0;
+  justify-content: center;
+  span {
+    display: flex;
+    font-weight: bold;
+    font-size: 1.3em;
+    justify-content: center;
+  }
+
+  .projetos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5em 0 0 0;
+
+    button {
+      padding: 1em 2em;
+      font-size: 1.2em;
+      background-color: transparent;
+      color: white;
+      border: solid 1px aqua;
+      border-radius: 1em;
+      cursor: pointer;
+      transition: background-color 0.7s ease-in-out, color 0.7s ease-in-out, border 0.7s ease-in-out;
+    }
+
+    button:hover {
+      background-color: white;
+      color: black;
+      border: solid 1px blue;
+    }
+  }
+}
+
+span,
+h1,
+h2,
+h4,
+p,
+button,
+img {
+  animation: slide-right 1s forwards;
 }
 
 h2 {
-    color: aqua;
-    font-size: 2em;
-}
-
-span {
-    font-weight: bold;
-    font-size: 0.9em;
-    border-bottom: 1px solid white;
+  color: aqua;
+  font-size: 2em;
 }
 
 @keyframes slide-right {
-    0% {
-      opacity: 0;
-      transform: translateX(-20px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateX(0);
-    }
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
