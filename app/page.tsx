@@ -4,11 +4,11 @@ import {
   Database, 
   Cloud, 
   Shield, 
-  Server, 
   Code2, 
   Cpu, 
   ExternalLink,
-  Lock
+  Lock,
+  Layers
 } from 'lucide-react';
 
 /* TODO: Componentização*/
@@ -55,11 +55,11 @@ export default function Home() {
   };
 
   const techStack = [
-    { name: "Desenvolvimento Backend", icon: <Server size={24} />, color: "text-red-500", desc: "Java & Spring Boot, .NET C#, APIs RESTful, Microsserviços." },
+    { name: "Linguagens e Frameworks", icon: <Code2 size={24} />, color: "text-red-500", desc: "Java, C#, TypeScript, Python, Spring, ASP.NET Core, .NET MAUI, Angular e Next.js." },
     { name: "Cibersegurança", icon: <Shield size={24} />, color: "text-green-500", desc: "Redes de computadores, boas práticas e fundamentos da segurança cibernética." },
-    { name: "Banco de Dados", icon: <Database size={24} />, color: "text-blue-400", desc: "Modelagem de dados relacionais e não relacionais e otimização de queries." },
+    { name: "Banco de Dados", icon: <Database size={24} />, color: "text-blue-400", desc: "Modelagem de dados SQL e NoSQL e otimização de queries." },
     { name: "Docker & Cloud", icon: <Cloud size={24} />, color: "text-cyan-500", desc: "Containerização e deploy escalável." },
-    { name: "Desenvolvendo Frontend", icon: <Code2 size={24} />, color: "text-pink-600", desc: "Frontend reativo e integração com APIs utilizando TypeScript junto à frameworks como Angular e Next.js." },
+    { name: "Conceitos", icon: <Layers size={24} />, color: "text-pink-600", desc: "Clean Architecture, SOLID, Design Patterns, Microsserviços." },
     { name: "Computer Science", icon: <Cpu size={24} />, color: "text-yellow-500", desc: "Fundamentos sólidos de algoritmos e estrutura de dados." },
   ];
 
@@ -114,12 +114,12 @@ export default function Home() {
           </p>
 
           <div className="flex flex-col md:flex-row gap-4 pt-4 justify-center md:justify-start">
-            <button className="px-8 py-3 rounded-lg bg-white text-black font-bold hover:bg-gray-200 transition-all flex items-center justify-center gap-2">
+            <a href={iam.github} className="px-8 py-3 rounded-lg bg-white text-black font-bold hover:bg-gray-200 transition-all flex items-center justify-center gap-2">
               <GithubIcon size={20}/> GitHub
-            </button>
-            <button className="px-8 py-3 rounded-lg border border-gray-700 hover:border-purple-500 hover:bg-purple-500/10 transition-all font-semibold flex items-center justify-center gap-2">
+            </a>
+            <a href={iam.linkedin} className="px-8 py-3 rounded-lg border border-gray-700 hover:border-purple-500 hover:bg-purple-500/10 transition-all font-semibold flex items-center justify-center gap-2">
               <LinkedinIcon size={20}/> LinkedIn
-            </button>
+            </a>
           </div>
         </section>
 
@@ -189,7 +189,7 @@ export default function Home() {
       <footer id="contato" className="border-t border-gray-800 bg-black/50 mt-20">
         <div className="max-w-7xl mx-auto px-6 py-12 md:flex items-center justify-between">
           <div className="mb-6 md:mb-0">
-            <h2 className="text-2xl font-bold text-white mb-2">Vamos construir algo seguro?</h2>
+            <h2 className="text-2xl font-bold text-white mb-2">Tem um projeto em mente?</h2>
             <p className="text-gray-400">Sempre aberto a novas oportunidades e desafios em backend.</p>
           </div>
           <div className="flex gap-6">
