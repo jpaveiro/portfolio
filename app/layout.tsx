@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Outfit } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
@@ -9,7 +9,19 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "João Pedro Aveiro | Desenvolvedor Full Stack",
-  description: "Portfólio",
+  description: "Estudante de Desenvolvimento de Sistemas, transformando ideias em código e aprendendo todos os dias a criar soluções digitais inteligentes.",
+  openGraph: {
+    siteName: "João Pedro Aveiro | Desenvolvedor Full Stack",
+    title: "João Pedro Aveiro | Desenvolvedor Full Stack",
+    description: "Estudante de Desenvolvimento de Sistemas, transformando ideias em código e aprendendo todos os dias a criar soluções digitais inteligentes.",
+    images: {
+      url: "https://github.com/jpaveiro.png",
+      width: 460,
+      height: 460
+    },
+    locale: "pt_BR",
+    type: "website"
+  }
 };
 
 export default function RootLayout({
