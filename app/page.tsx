@@ -11,7 +11,7 @@ import {
   FileUserIcon
 } from 'lucide-react';
 
-/* TODO: Componentização*/
+/* TODO: Componentização, Seção conquistas */
 
 const GithubIcon = ({ size = 24, className = "" }) => (
   <svg 
