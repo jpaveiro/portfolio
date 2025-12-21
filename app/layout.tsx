@@ -5,23 +5,25 @@ import "./globals.css";
 const inter = Inter({
   weight: ["400", "700"],
   subsets: ["latin"]
-})
+});
 
 export const metadata: Metadata = {
   title: "João Pedro Aveiro | Desenvolvedor Full Stack",
-  description: "Estudante de Desenvolvimento de Sistemas, transformando ideias em código e aprendendo todos os dias a criar soluções digitais inteligentes.",
+  description:
+    "Estudante de Desenvolvimento de Sistemas, transformando ideias em código e aprendendo todos os dias a criar soluções digitais inteligentes.",
   openGraph: {
     siteName: "João Pedro Aveiro | Desenvolvedor Full Stack",
     title: "João Pedro Aveiro | Desenvolvedor Full Stack",
-    description: "Estudante de Desenvolvimento de Sistemas, transformando ideias em código e aprendendo todos os dias a criar soluções digitais inteligentes.",
+    description:
+      "Estudante de Desenvolvimento de Sistemas, transformando ideias em código e aprendendo todos os dias a criar soluções digitais inteligentes.",
     images: {
       url: "https://github.com/jpaveiro.png",
       width: 460,
-      height: 460
+      height: 460,
     },
     locale: "pt_BR",
-    type: "website"
-  }
+    type: "website",
+  },
 };
 
 export default function RootLayout({
@@ -31,9 +33,22 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className={`${inter.className} antialiased`}>
-        {children}
-      </body>
+      <head>
+        <link rel="icon" href="/favicon.ico"/>
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png"
+        />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/apple-touch-icon.png"
+        />
+        <link rel="manifest" href="/site.webmanifest" />
+      </head>
+      <body className={`${inter.className} antialiased`}>{children}</body>
     </html>
   );
 }
