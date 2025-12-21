@@ -1,7 +1,7 @@
-import { School, Trophy } from "lucide-react";
+import { School, Target, Trophy } from "lucide-react";
 
 export default function Feats() {
-  const achievements = [
+  const feats = [
     {
       title: "Bootcamp CDB Java | Educ360° & Foursys",
       highlight: "Fourcamp",
@@ -18,6 +18,14 @@ export default function Feats() {
       color: "text-blue-400",
       badge: "Acadêmica",
     },
+    {
+      title: "Hackathons & Competições",
+      highlight: "Em breve",
+      desc: "Participação em hackathons e maratonas de programação focadas em backend e segurança para resolver desafios reais em equipe.",
+      icon: <Target size={22} />,
+      color: "text-red-400",
+      badge: "Em breve",
+    },
   ];
 
   return (
@@ -28,7 +36,7 @@ export default function Feats() {
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        {achievements.map((item) => (
+        {feats.map((item) => (
           <div
             key={item.title}
             className="group relative overflow-hidden rounded-2xl bg-gray-900/60 border border-gray-800 hover:border-yellow-400/40 hover:bg-gray-800/60 transition-all duration-300"
