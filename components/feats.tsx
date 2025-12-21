@@ -13,7 +13,7 @@ export default function Feats() {
     {
       title: "ETEC Prof. Horácio Augusto da Silveira",
       highlight: "Destaque acadêmico",
-      desc: "Destaque acadêmico em Desenvolvimento de Sistemas com excelência em projetos práticos e notas máximas em matérias relacionadas ao curso.",
+      desc: "Destaque acadêmico em Desenvolvimento de Sistemas com excelência em projetos práticos e notas máximas na maioria das matérias relacionadas ao curso.",
       icon: <School size={22} />,
       color: "text-blue-400",
       badge: "Acadêmica",

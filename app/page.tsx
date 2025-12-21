@@ -227,23 +227,24 @@ export default function Home() {
               className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-900 to-black border border-gray-800 hover:border-blue-500/30 transition-all"
             >
               <div className="p-8">
-                <div className="flex justify-between items-start mb-4">
-                  <div className="flex gap-2 flex-wrap">
+                <div className="flex justify-between items-start mb-4 gap-2">
+                  <div className="flex gap-2 flex-wrap max-w-[90%]">
                     {project.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="px-3 py-1 text-xs font-medium rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20"
+                        className="px-4 py-1 text-xs font-medium rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20"
                       >
                         {tag}
                       </span>
                     ))}
                   </div>
+
                   <ExternalLink
                     size={20}
-                    className="text-gray-500 group-hover:text-white transition-colors"
+                    className="text-gray-500 group-hover:text-white transition-colors shrink-0 w-5 h-5"
                   />
                 </div>
-                <h3 className="text-2xl font-bold mb-3 group-hover:text-blue-400 transition-colors">
+                <h3 className="text-2xl font-bold mb-3 group-hover:text-blue-400 transition-colors max-w-[90%]">
                   {project.title}
                 </h3>
                 <p className="text-gray-400 mb-6 line-clamp-3">
