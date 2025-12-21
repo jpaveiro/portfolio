@@ -1,34 +1,35 @@
-import { 
-  Mail, 
-  Terminal, 
-  Database, 
-  Shield, 
-  Code2, 
-  Cpu, 
+import Feats from "@/components/feats";
+import {
+  Mail,
+  Terminal,
+  Database,
+  Shield,
+  Code2,
+  Cpu,
   ExternalLink,
   Lock,
   Layers,
-  FileUserIcon
-} from 'lucide-react';
+  FileUserIcon,
+} from "lucide-react";
 
-/* TODO: Componentização, Seção conquistas */
+/* TODO: Componentização */
 
 const GithubIcon = ({ size = 24, className = "" }) => (
-  <svg 
-    role="img" 
-    viewBox="0 0 24 24" 
-    xmlns="http://www.w3.org/2000/svg" 
-    width={size} 
-    height={size} 
-    fill="currentColor" 
+  <svg
+    role="img"
+    viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
+    width={size}
+    height={size}
+    fill="currentColor"
     className={className}
   >
-    <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.604-2.665-.305-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+    <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.604-2.665-.305-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
   </svg>
 );
 
 const LinkedinIcon = ({ size = 24, className = "" }) => (
-  <svg 
+  <svg
     width={size}
     height={size}
     viewBox="0 0 24 24"
@@ -45,38 +46,84 @@ const LinkedinIcon = ({ size = 24, className = "" }) => (
   </svg>
 );
 
-export default function Home() {  
-    const iam = {
+export default function Home() {
+  const iam = {
     name: "João Pedro Aveiro",
     email: "jpaveiros@gmail.com",
     github: "https://github.com/jpaveiro",
     linkedin: "https://www.linkedin.com/in/jpaveiro/",
     cv: "https://drive.google.com/file/d/1rTln8k_-XVWNbeF-sWAHuyUWnnLJyHuR/view",
-    description: "Estudante de Desenvolvimento de Sistemas, transformando ideias em código e aprendendo todos os dias a criar soluções digitais inteligentes."
+    description:
+      "Estudante de Desenvolvimento de Sistemas, transformando ideias em código e aprendendo todos os dias a criar soluções digitais inteligentes.",
   };
 
   const techStack = [
-    { name: "Linguagens e Frameworks", icon: <Code2 size={24} />, color: "text-red-500", desc: "Java, C#, TypeScript, Python, Spring, ASP.NET Core, .NET MAUI, Angular e Next.js." },
-    { name: "Cibersegurança", icon: <Shield size={24} />, color: "text-green-500", desc: "Redes de computadores, boas práticas e fundamentos da segurança cibernética." },
-    { name: "Banco de Dados", icon: <Database size={24} />, color: "text-blue-400", desc: "Modelagem de dados SQL e NoSQL e otimização de queries." },
+    {
+      name: "Linguagens e Frameworks",
+      icon: <Code2 size={24} />,
+      color: "text-red-500",
+      desc: "Java, C#, TypeScript, Python, Spring, ASP.NET Core, .NET MAUI, Angular e Next.js.",
+    },
+    {
+      name: "Cibersegurança",
+      icon: <Shield size={24} />,
+      color: "text-green-500",
+      desc: "Redes de computadores, boas práticas e fundamentos da segurança cibernética.",
+    },
+    {
+      name: "Banco de Dados",
+      icon: <Database size={24} />,
+      color: "text-blue-400",
+      desc: "Modelagem de dados SQL e NoSQL e otimização de queries.",
+    },
     // { name: "Docker & Cloud", icon: <Cloud size={24} />, color: "text-cyan-500", desc: "Containerização e deploy escalável." },
-    { name: "Conceitos", icon: <Layers size={24} />, color: "text-pink-600", desc: "Clean Architecture, SOLID, Design Patterns, Microsserviços." },
-    { name: "Computer Science", icon: <Cpu size={24} />, color: "text-yellow-500", desc: "Fundamentos sólidos de algoritmos e estrutura de dados." },
+    {
+      name: "Conceitos",
+      icon: <Layers size={24} />,
+      color: "text-pink-600",
+      desc: "Clean Architecture, SOLID, Metodologia Ágil, Design Patterns, Microsserviços.",
+    },
+    {
+      name: "Computer Science",
+      icon: <Cpu size={24} />,
+      color: "text-yellow-500",
+      desc: "Fundamentos sólidos de algoritmos e estrutura de dados.",
+    },
   ];
 
   const projects = [
     {
       title: "Velo",
-      tags: ["Java", "Spring Boot", "Golang", "Gin", "TypeScript", "Angular", "Swift", "Mobile", "API", "Microsserviços", "gRPC"],
+      tags: [
+        "Java",
+        "Spring Boot",
+        "Golang",
+        "Gin",
+        "TypeScript",
+        "Angular",
+        "Swift",
+        "Mobile",
+        "API",
+        "Microsserviços",
+        "gRPC",
+      ],
       desc: "Plataforma social para ciclistas com arquitetura de microsserviços. Criação de rotas personalizadas, interação entre ciclistas por meio de comunidades e eventos, foco em segurança durante os trajetos.",
-      link: "https://github.com/velo-project/"
+      link: "https://github.com/velo-project/",
     },
     {
       title: "BasicT-NG",
-      tags: ["Java", "Spring Boot", "TypeScript", "Angular", "Monólito", "API", "REST"],
+      tags: [
+        "Java",
+        "Spring Boot",
+        "TypeScript",
+        "Angular",
+        "Monólito",
+        "API",
+        "REST",
+      ],
       desc: "WebApp Ponto de Venda desenvolvido com Angular, SpringBoot e MySQL.",
-      link: "https://github.com/jpaveiro/BasicT-NG"
-    }
+      link: "https://github.com/jpaveiro/BasicT-NG",
+    },
   ];
 
   return (
@@ -85,11 +132,14 @@ export default function Home() {
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between p-4 md:px-8">
           <h1 className="text-xl font-bold tracking-tighter hover:text-purple-400 transition-colors cursor-pointer mb-2 md:mb-0 flex items-center gap-2">
             <Terminal size={20} className="text-purple-500" /> {iam.name}
-          </h1> 
+          </h1>
           <ul className="flex gap-6 text-sm font-medium text-gray-400">
-            {['Início', 'Tecnologias', 'Projetos', 'Contato'].map((item) => (
+            {["Início", "Tecnologias", "Conquistas", "Projetos", "Contato"].map((item) => (
               <li key={item}>
-                <a href={`#${item.toLowerCase()}`} className="hover:text-white hover:underline decoration-purple-500 decoration-2 underline-offset-4 transition-all">
+                <a
+                  href={`#${item.toLowerCase()}`}
+                  className="hover:text-white hover:underline decoration-purple-500 decoration-2 underline-offset-4 transition-all"
+                >
                   {item}
                 </a>
               </li>
@@ -98,7 +148,10 @@ export default function Home() {
         </div>
       </nav>
 
-      <main id="início" className="max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center justify-between mt-12 md:mt-24 px-6 md:px-8 gap-12 mb-32">
+      <main
+        id="início"
+        className="max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center justify-between mt-12 md:mt-24 px-6 md:px-8 gap-12 mb-32"
+      >
         <section className="flex-1 space-y-6 text-center md:text-left">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-semibold uppercase tracking-wider mb-2">
             <span className="relative flex h-2 w-2">
@@ -107,28 +160,37 @@ export default function Home() {
             </span>
             On-line
           </div>
-          
+
           <h1 className="text-4xl md:text-6xl font-extrabold leading-tight">
             Codando o futuro com
-            <br/>
+            <br />
             <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500 bg-clip-text text-transparent animate-pulse">
               Criatividade & Inovação
             </span>
           </h1>
-          
+
           <p className="text-gray-400 text-lg max-w-xl mx-auto md:mx-0 leading-relaxed">
             {iam.description}
           </p>
 
           <div className="flex flex-col md:flex-row gap-4 pt-4 justify-center md:justify-start">
-            <a href={iam.cv} className="px-8 py-3 rounded-lg bg-white text-black font-bold hover:bg-gray-200 transition-all flex items-center justify-center gap-2">
-              <FileUserIcon size={20}/> Currículo
+            <a
+              href={iam.cv}
+              className="px-8 py-3 rounded-lg bg-white text-black font-bold hover:bg-gray-200 transition-all flex items-center justify-center gap-2"
+            >
+              <FileUserIcon size={20} /> Currículo
             </a>
-            <a href={iam.linkedin} className="px-8 py-3 rounded-lg border border-gray-700 hover:border-purple-500 hover:bg-purple-500/10 transition-all font-semibold flex items-center justify-center gap-2">
-              <LinkedinIcon size={20}/> LinkedIn
+            <a
+              href={iam.linkedin}
+              className="px-8 py-3 rounded-lg border border-gray-700 hover:border-purple-500 hover:bg-purple-500/10 transition-all font-semibold flex items-center justify-center gap-2"
+            >
+              <LinkedinIcon size={20} /> LinkedIn
             </a>
-              <a href={iam.github} className="px-8 py-3 rounded-lg bg-white text-black font-bold hover:bg-gray-200 transition-all flex items-center justify-center gap-2">
-              <GithubIcon size={20}/> GitHub
+            <a
+              href={iam.github}
+              className="px-8 py-3 rounded-lg bg-white text-black font-bold hover:bg-gray-200 transition-all flex items-center justify-center gap-2"
+            >
+              <GithubIcon size={20} /> GitHub
             </a>
           </div>
         </section>
@@ -136,58 +198,92 @@ export default function Home() {
         <div className="relative group w-64 h-64 md:w-96 md:h-96">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full blur-3xl opacity-20 group-hover:opacity-40 transition-opacity duration-500"></div>
           <div className="relative w-full h-full rounded-full overflow-hidden border-2 border-gray-800 bg-gray-900 shadow-2xl">
-             <img src={`${iam.github}.png`} alt={iam.name} className="w-full h-full object-cover" />
+            <img
+              src={`${iam.github}.png`}
+              alt={iam.name}
+              className="w-full h-full object-cover"
+            />
           </div>
-          
+
           <div className="absolute top-0 right-0 animate-bounce bg-black/80 backdrop-blur p-3 rounded-2xl border border-gray-800 shadow-xl">
-             <Lock className="text-green-400" size={24} />
+            <Lock className="text-green-400" size={24} />
           </div>
           <div className="absolute bottom-10 -left-4 animate-bounce delay-700 bg-black/80 backdrop-blur p-3 rounded-2xl border border-gray-800 shadow-xl">
-             <Database className="text-blue-400" size={24} />
+            <Database className="text-blue-400" size={24} />
           </div>
         </div>
       </main>
 
       <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-800 to-transparent my-10"></div>
 
-      <section id="tecnologias" className="max-w-7xl mx-auto px-6 md:px-8 py-20">
+      <section
+        id="tecnologias"
+        className="max-w-7xl mx-auto px-6 md:px-8 py-20"
+      >
         <h2 className="text-3xl font-bold mb-12 flex items-center gap-3">
           <Terminal className="text-purple-500" /> Hard Skills
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {techStack.map((tech, i) => (
-            <div key={i} className="group p-6 rounded-2xl bg-gray-900/50 border border-gray-800 hover:border-purple-500/50 hover:bg-gray-800/50 transition-all duration-300">
-              <div className={`mb-4 ${tech.color} p-3 rounded-xl bg-gray-950 w-fit group-hover:scale-110 transition-transform`}>
+          {techStack.map((tech) => (
+            <div
+              key={tech.name}
+              className="group p-6 rounded-2xl bg-gray-900/50 border border-gray-800 hover:border-purple-500/50 hover:bg-gray-800/50 transition-all duration-300"
+            >
+              <div
+                className={`mb-4 ${tech.color} p-3 rounded-xl bg-gray-950 w-fit group-hover:scale-110 transition-transform`}
+              >
                 {tech.icon}
               </div>
-              <h3 className={`text-xl font-bold mb-2 ${tech.color}`}>{tech.name}</h3>
-              <p className="text-gray-400 text-sm leading-relaxed">{tech.desc}</p>
+              <h3 className={`text-xl font-bold mb-2 ${tech.color}`}>
+                {tech.name}
+              </h3>
+              <p className="text-gray-400 text-sm leading-relaxed">
+                {tech.desc}
+              </p>
             </div>
           ))}
         </div>
       </section>
+
+      <Feats />
 
       <section id="projetos" className="max-w-7xl mx-auto px-6 md:px-8 py-20">
         <h2 className="text-3xl font-bold mb-12 flex items-center gap-3">
           <Code2 className="text-blue-500" /> Projetos em Destaque
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {projects.map((project, i) => (
-            <div key={i} className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-900 to-black border border-gray-800 hover:border-blue-500/30 transition-all">
+          {projects.map((project) => (
+            <div
+              key={project.title}
+              className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-900 to-black border border-gray-800 hover:border-blue-500/30 transition-all"
+            >
               <div className="p-8">
                 <div className="flex justify-between items-start mb-4">
                   <div className="flex gap-2 flex-wrap">
-                    {project.tags.map(tag => (
-                      <span key={tag} className="px-3 py-1 text-xs font-medium rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20">
+                    {project.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="px-3 py-1 text-xs font-medium rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20"
+                      >
                         {tag}
                       </span>
                     ))}
                   </div>
-                  <ExternalLink size={20} className="text-gray-500 group-hover:text-white transition-colors" />
+                  <ExternalLink
+                    size={20}
+                    className="text-gray-500 group-hover:text-white transition-colors"
+                  />
                 </div>
-                <h3 className="text-2xl font-bold mb-3 group-hover:text-blue-400 transition-colors">{project.title}</h3>
-                <p className="text-gray-400 mb-6 line-clamp-3">{project.desc}</p>
-                <a href={project.link} className="inline-flex items-center text-sm font-semibold text-white hover:text-blue-400 transition-colors">
+                <h3 className="text-2xl font-bold mb-3 group-hover:text-blue-400 transition-colors">
+                  {project.title}
+                </h3>
+                <p className="text-gray-400 mb-6 line-clamp-3">
+                  {project.desc}
+                </p>
+                <a
+                  href={project.link}
+                  className="inline-flex items-center text-sm font-semibold text-white hover:text-blue-400 transition-colors"
+                >
                   Ver projeto <span className="ml-2">→</span>
                 </a>
               </div>
@@ -196,25 +292,44 @@ export default function Home() {
         </div>
       </section>
 
-      <footer id="contato" className="border-t border-gray-800 bg-black/50 mt-20">
+      <footer
+        id="contato"
+        className="border-t border-gray-800 bg-black/50 mt-20"
+      >
         <div className="max-w-7xl mx-auto px-6 py-12 md:flex items-center justify-between">
           <div className="mb-6 md:mb-0">
-            <h2 className="text-2xl font-bold text-white mb-2">Tem um projeto em mente?</h2>
-            <p className="text-gray-400">Sempre aberto a novas oportunidades e desafios em backend.</p>
+            <h2 className="text-2xl font-bold text-white mb-2">
+              Tem um projeto em mente?
+            </h2>
+            <p className="text-gray-400">
+              Sempre aberto a novas oportunidades e desafios em backend.
+            </p>
           </div>
-        
+
           <div className="flex gap-6">
-            <a href={iam.cv} className="p-3 rounded-full bg-gray-900 text-gray-400 hover:text-white hover:bg-blue-600 transition-all">
-              <FileUserIcon size={24}/>
+            <a
+              href={iam.cv}
+              className="p-3 rounded-full bg-gray-900 text-gray-400 hover:text-white hover:bg-blue-600 transition-all"
+            >
+              <FileUserIcon size={24} />
             </a>
 
-            <a href={iam.linkedin} className="p-3 rounded-full bg-gray-900 text-gray-400 hover:text-white hover:bg-blue-600 transition-all">
+            <a
+              href={iam.linkedin}
+              className="p-3 rounded-full bg-gray-900 text-gray-400 hover:text-white hover:bg-blue-600 transition-all"
+            >
               <LinkedinIcon size={24} />
             </a>
-            <a href={iam.github} className="p-3 rounded-full bg-gray-900 text-gray-400 hover:text-white hover:bg-purple-600 transition-all">
+            <a
+              href={iam.github}
+              className="p-3 rounded-full bg-gray-900 text-gray-400 hover:text-white hover:bg-purple-600 transition-all"
+            >
               <GithubIcon size={24} />
             </a>
-            <a href={`mailto:${iam.email}`} className="p-3 rounded-full bg-gray-900 text-gray-400 hover:text-white hover:bg-green-600 transition-all">
+            <a
+              href={`mailto:${iam.email}`}
+              className="p-3 rounded-full bg-gray-900 text-gray-400 hover:text-white hover:bg-green-600 transition-all"
+            >
               <Mail size={24} />
             </a>
           </div>
