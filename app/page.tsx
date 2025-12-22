@@ -144,22 +144,16 @@ export default function Home() {
 
           <div className="flex flex-col md:flex-row gap-4 pt-4 justify-center md:justify-start">
             <a
-              href={iam.cv}
+              href={iam.github}
               className="px-8 py-3 rounded-lg bg-white text-black font-bold hover:bg-gray-200 transition-all flex items-center justify-center gap-2"
             >
-              <FileUserIcon size={20} /> Currículo
+              <GithubIcon size={20} /> GitHub
             </a>
             <a
               href={iam.linkedin}
               className="px-8 py-3 rounded-lg border border-gray-700 hover:border-purple-500 hover:bg-purple-500/10 transition-all font-semibold flex items-center justify-center gap-2"
             >
               <LinkedinIcon size={20} /> LinkedIn
-            </a>
-            <a
-              href={iam.github}
-              className="px-8 py-3 rounded-lg bg-white text-black font-bold hover:bg-gray-200 transition-all flex items-center justify-center gap-2"
-            >
-              <GithubIcon size={20} /> GitHub
             </a>
           </div>
         </section>
