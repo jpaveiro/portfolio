@@ -19,9 +19,8 @@ export default function Home() {
     email: "jpaveiros@gmail.com",
     github: "https://github.com/jpaveiro",
     linkedin: "https://www.linkedin.com/in/jpaveiro/",
-    cv: "https://drive.google.com/file/d/1rTln8k_-XVWNbeF-sWAHuyUWnnLJyHuR/view",
     description:
-      "Estudante de Desenvolvimento de Sistemas, transformando ideias em código e aprendendo todos os dias a criar soluções digitais inteligentes.",
+      "Técnico em Desenvolvimento de Sistemas, transformando ideias em código e aprendendo todos os dias a criar soluções digitais inteligentes.",
   };
 
   const techStack = [
@@ -271,13 +270,6 @@ export default function Home() {
           </div>
 
           <div className="flex gap-6">
-            <a
-              href={iam.cv}
-              className="p-3 rounded-full bg-gray-900 text-gray-400 hover:text-white hover:bg-blue-600 transition-all"
-            >
-              <FileUserIcon size={24} />
-            </a>
-
             <a
               href={iam.linkedin}
               className="p-3 rounded-full bg-gray-900 text-gray-400 hover:text-white hover:bg-blue-600 transition-all"
