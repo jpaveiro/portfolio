@@ -5,7 +5,7 @@ export default function Feats() {
     {
       title: "Bootcamp CDB Java | Educ360° & Foursys",
       highlight: "Fourcamp",
-      desc: "Bootcamp 2024 com projeto destaque. Indicado para processo seletivo Fourcamp (programa trainee Foursys).",
+      desc: "Bootcamp 2024 com projeto destaque. Indicado para processo seletivo Fourcamp (processo seletivo Foursys).",
       icon: <Trophy size={22} />,
       color: "text-yellow-400",
       badge: "Destaque",

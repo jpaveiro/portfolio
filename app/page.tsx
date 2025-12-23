@@ -90,6 +90,18 @@ export default function Home() {
       desc: "WebApp Ponto de Venda desenvolvido com Angular, SpringBoot e MySQL.",
       link: "https://github.com/jpaveiro/BasicT-NG",
     },
+    {
+      title: "Backend Challenge Itaú Unibanco",
+      tags: [
+        "Desafio Backend",
+        "Java",
+        "Spring Boot",
+        "API",
+        "RESTful"
+      ],
+      desc: "O sistema tem como objetivo principal o registro de transações financeiras e o cálculo de estatísticas em tempo real, com base nas transações recebidas nos últimos 60 segundos.",
+      link: "https://github.com/jpaveiro/BackendChallenge.Itau99"
+    }
   ];
 
   return (
@@ -183,7 +195,7 @@ export default function Home() {
         className="max-w-7xl mx-auto px-6 md:px-8 py-20"
       >
         <h2 className="text-3xl font-bold mb-12 flex items-center gap-3">
-          <Terminal className="text-purple-500" /> Hard Skills
+          <Terminal className="text-purple-500" /> Skills
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {techStack.map((tech) => (
