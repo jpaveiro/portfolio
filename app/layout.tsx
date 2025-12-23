@@ -32,6 +32,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const apiUrl: string = process.env.ANALYTICS_ID || '';
+
   return (
     <html lang="pt-BR">
       <head>
@@ -50,7 +52,7 @@ export default function RootLayout({
         <link rel="manifest" href="/site.webmanifest" />
       </head>
       <body className={`${inter.className} antialiased`}>{children}</body>
-      <GoogleAnalytics gaId="G-05G9ZT2W6H"/>
+      <GoogleAnalytics gaId={`${apiUrl}`}/>
     </html>
   );
 }
