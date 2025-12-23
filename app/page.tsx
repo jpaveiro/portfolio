@@ -111,15 +111,13 @@ export default function Home() {
           <h1 className="text-xl font-bold tracking-tighter hover:text-purple-400 transition-colors cursor-pointer mb-2 md:mb-0 flex items-center gap-2">
             <Terminal size={20} className="text-purple-500" /> {iam.name}
           </h1>
-          <ul className="flex gap-4 sm:gap-6 text-sm font-medium text-gray-400 
-                        overflow-x-auto scrollbar-hide whitespace-nowrap pb-2 md:pb-0 
-                        md:flex md:gap-6 md:overflow-visible md:whitespace-normal">
+          <ul className="flex gap-6 text-sm font-medium text-gray-400">
             {["Início", "Tecnologias", "Conquistas", "Projetos", "Contato"].map(
               (item) => (
-                <li key={item} className="flex-shrink-0 md:flex-1">
+                <li key={item}>
                   <a
                     href={`#${item.toLowerCase()}`}
-                    className="hover:text-white hover:underline decoration-purple-500 decoration-2 underline-offset-4 transition-all px-2 py-1 block"
+                    className="hover:text-white hover:underline decoration-purple-500 decoration-2 underline-offset-4 transition-all"
                   >
                     {item}
                   </a>
