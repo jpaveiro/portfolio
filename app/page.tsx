@@ -7,9 +7,10 @@ import {
   Shield,
   Code2,
   ExternalLink,
-  Lock,
   Layers,
   Cloud,
+  Coffee,
+  Computer,
 } from "lucide-react";
 
 export default function Home() {
@@ -26,13 +27,13 @@ export default function Home() {
     {
       name: "Linguagens & Frameworks",
       icon: <Code2 size={24} />,
-      color: "text-red-500",
+      color: "text-red-400",
       desc: "Java, TypeScript, C#, Python, Spring, ASP.NET Core, .NET MAUI, Angular e Next.js.",
     },
     {
       name: "Redes & Cibersegurança",
       icon: <Shield size={24} />,
-      color: "text-green-500",
+      color: "text-green-400",
       desc: "Redes de computadores, boas práticas e fundamentos da segurança cibernética.",
     },
     {
@@ -44,13 +45,13 @@ export default function Home() {
     { 
       name: "Docker & Cloud",
       icon: <Cloud size={24} />,
-      color: "text-cyan-500",
+      color: "text-cyan-400",
       desc: "Docker Compose, Containerização, GCP e DigitalOcean."
     },
     {
       name: "Arquitetura & Design",
       icon: <Layers size={24} />,
-      color: "text-purple-600",
+      color: "text-purple-400",
       desc: "SOLID, Clean Architecture, RESTful APIs, Microsserviços.",
     },
   ];
@@ -179,10 +180,10 @@ export default function Home() {
           </div>
 
           <div className="absolute top-0 right-0 animate-bounce bg-black/80 backdrop-blur p-3 rounded-2xl border border-gray-800 shadow-xl">
-            <Lock className="text-green-400" size={24} />
+            <Computer className="text-purple-400" size={24} />
           </div>
           <div className="absolute bottom-10 -left-4 animate-bounce delay-700 bg-black/80 backdrop-blur p-3 rounded-2xl border border-gray-800 shadow-xl">
-            <Database className="text-blue-400" size={24} />
+            <Coffee className="text-orange-400" size={24} />
           </div>
         </div>
       </main>
