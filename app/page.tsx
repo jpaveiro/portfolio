@@ -6,10 +6,10 @@ import {
   Database,
   Shield,
   Code2,
-  Cpu,
   ExternalLink,
   Lock,
   Layers,
+  Cloud,
 } from "lucide-react";
 
 export default function Home() {
@@ -24,13 +24,13 @@ export default function Home() {
 
   const techStack = [
     {
-      name: "Linguagens e Frameworks",
+      name: "Linguagens & Frameworks",
       icon: <Code2 size={24} />,
       color: "text-red-500",
-      desc: "Java, C#, TypeScript, Python, Spring, ASP.NET Core, .NET MAUI, Angular e Next.js.",
+      desc: "Java, TypeScript, C#, Python, Spring, ASP.NET Core, .NET MAUI, Angular e Next.js.",
     },
     {
-      name: "Cibersegurança",
+      name: "Redes & Cibersegurança",
       icon: <Shield size={24} />,
       color: "text-green-500",
       desc: "Redes de computadores, boas práticas e fundamentos da segurança cibernética.",
@@ -39,20 +39,19 @@ export default function Home() {
       name: "Banco de Dados",
       icon: <Database size={24} />,
       color: "text-blue-400",
-      desc: "Modelagem de dados SQL e NoSQL e otimização de queries.",
+      desc: "Modelagem SQL e NoSQL, consultas e busca por similaridade utilizando PGVector.",
     },
-    // { name: "Docker & Cloud", icon: <Cloud size={24} />, color: "text-cyan-500", desc: "Containerização e deploy escalável." },
+    { 
+      name: "Docker & Cloud",
+      icon: <Cloud size={24} />,
+      color: "text-cyan-500",
+      desc: "Docker Compose, Containerização, GCP e DigitalOcean."
+    },
     {
-      name: "Conceitos",
+      name: "Arquitetura & Design",
       icon: <Layers size={24} />,
-      color: "text-pink-600",
-      desc: "Clean Architecture, SOLID, Metodologia Ágil, Design Patterns, Microsserviços.",
-    },
-    {
-      name: "Computer Science",
-      icon: <Cpu size={24} />,
-      color: "text-yellow-500",
-      desc: "Fundamentos sólidos de algoritmos e estrutura de dados.",
+      color: "text-purple-600",
+      desc: "SOLID, Clean Architecture, RESTful APIs, Microsserviços.",
     },
   ];
 
