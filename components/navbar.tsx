@@ -3,7 +3,7 @@ import { Menu, Terminal, X } from "lucide-react";
 import { useState } from "react";
 import { Props } from "./types/props";
 
-
+// TODO: Melhora do código
 export default function Navbar({iam}: Props) {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     return (
@@ -31,7 +31,7 @@ export default function Navbar({iam}: Props) {
             </button>
 
             <ul className="hidden md:flex gap-6 text-sm font-medium text-gray-400 ml-8">
-              {["Início", "Tecnologias", "Conquistas", "Projetos", "Contato"].map((item) => (
+              {["Início", "Skills", "Conquistas", "Projetos", "Contato"].map((item) => (
                 <li key={item}>
                   <a
                     href={`#${item.toLowerCase()}`}
@@ -48,7 +48,7 @@ export default function Navbar({iam}: Props) {
             isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
           }`}>
             <ul className="flex flex-col gap-2 px-1 pb-4 pt-2 text-sm font-medium text-gray-100">
-              {["Início", "Tecnologias", "Conquistas", "Projetos", "Contato"].map((item) => (
+              {["Início", "Skills", "Conquistas", "Projetos", "Contato"].map((item) => (
                 <li key={item}>
                   <a
                     href={`#${item.toLowerCase()}`}
