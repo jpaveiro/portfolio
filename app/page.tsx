@@ -1,4 +1,5 @@
 import Feats from "@/components/feats";
+import Navbar from "@/components/navbar";
 import { GithubIcon, LinkedinIcon } from "@/components/ui/icon";
 import {
   Mail,
@@ -10,7 +11,7 @@ import {
   Layers,
   Cloud,
   Coffee,
-  Computer,
+  Computer
 } from "lucide-react";
 
 export default function Home() {
@@ -106,28 +107,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-[#0a0a0a] text-gray-100 selection:bg-purple-500/30 overflow-x-hidden">
-      <nav className="sticky top-0 z-50 backdrop-blur-md bg-black/50 border-b border-white/10">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between p-4 md:px-8">
-          <h1 className="text-xl font-bold tracking-tighter hover:text-purple-400 transition-colors cursor-pointer mb-2 md:mb-0 flex items-center gap-2">
-            <Terminal size={20} className="text-purple-500" /> {iam.name}
-          </h1>
-          <ul className="flex gap-6 text-sm font-medium text-gray-400">
-            {["Início", "Tecnologias", "Conquistas", "Projetos", "Contato"].map(
-              (item) => (
-                <li key={item}>
-                  <a
-                    href={`#${item.toLowerCase()}`}
-                    className="hover:text-white hover:underline decoration-purple-500 decoration-2 underline-offset-4 transition-all"
-                  >
-                    {item}
-                  </a>
-                </li>
-              )
-            )}
-          </ul>
-        </div>
-      </nav>
-
+    <Navbar iam={iam}></Navbar>
       <main
         id="início"
         className="max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center justify-between mt-12 md:mt-24 px-6 md:px-8 gap-12 mb-32"
