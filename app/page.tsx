@@ -171,7 +171,7 @@ export default function Home() {
       <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-800 to-transparent my-10"></div>
 
       <section
-        id="tecnologias"
+        id="skills"
         className="max-w-7xl mx-auto px-6 md:px-8 py-20"
       >
         <h2 className="text-3xl font-bold mb-12 flex items-center gap-3">
