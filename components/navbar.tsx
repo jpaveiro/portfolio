@@ -1,11 +1,38 @@
 'use client'
-import { Menu, Terminal, X } from "lucide-react";
+import { Files, Home, Menu, Phone, Terminal, Trophy, X } from "lucide-react";
 import { useState } from "react";
 import { Props } from "./types/props";
 
 // TODO: Melhora do código
 export default function Navbar({iam}: Props) {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    const navbarButtons = 
+    [
+      { 
+        name: "Início",
+        icon: <Home size={14}/>
+      },
+      {
+        name: "Skills",
+        icon: <Terminal size={14}/>
+      },
+      {
+        name: "Conquistas",
+        icon: <Trophy size={14}/>
+
+      },
+      {
+        name: "Projetos",
+        icon: <Files size={14}/>
+
+      },
+      {
+        name: "Contato",
+        icon: <Phone size={14}/>
+
+      }
+    ]
     return (
       <nav className="sticky top-0 z-50 backdrop-blur-md bg-black/50 border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
@@ -31,13 +58,14 @@ export default function Navbar({iam}: Props) {
             </button>
 
             <ul className="hidden md:flex gap-6 text-sm font-medium text-gray-400 ml-8">
-              {["Início", "Skills", "Conquistas", "Projetos", "Contato"].map((item) => (
-                <li key={item}>
+              {navbarButtons.map((item) => (
+                <li key={item.name}>
                   <a
-                    href={`#${item.toLowerCase()}`}
-                    className="hover:text-white hover:underline decoration-purple-500 decoration-2 underline-offset-4 transition-all"
+                    href={`#${item.name.toLowerCase()}`}
+                    className="flex items-center gap-2 hover:text-white hover:underline decoration-purple-500 decoration-2 underline-offset-4 transition-all"
                   >
-                    {item}
+                    {item.icon}
+                    {item.name}
                   </a>
                 </li>
               ))}
@@ -48,14 +76,15 @@ export default function Navbar({iam}: Props) {
             isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
           }`}>
             <ul className="flex flex-col gap-2 px-1 pb-4 pt-2 text-sm font-medium text-gray-100">
-              {["Início", "Skills", "Conquistas", "Projetos", "Contato"].map((item) => (
-                <li key={item}>
+              {navbarButtons.map((item) => (
+                <li key={item.name}>
                   <a
-                    href={`#${item.toLowerCase()}`}
+                    href={`#${item.name.toLowerCase()}`}
                     onClick={() => setIsMenuOpen(false)}
-                    className="block py-3 px-4 rounded-lg hover:bg-white/10 transition-all hover:text-white"
+                    className="flex items-center gap-3 py-3 px-4 rounded-lg hover:bg-white/10 transition-all hover:text-white"
                   >
-                    {item}
+                    {item.icon}
+                    {item.name}
                   </a>
                 </li>
               ))}
