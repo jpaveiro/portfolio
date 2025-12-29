@@ -11,7 +11,8 @@ import {
   Layers,
   Cloud,
   Coffee,
-  Computer
+  Computer,
+  Files
 } from "lucide-react";
 
 export default function Home() {
@@ -203,7 +204,7 @@ export default function Home() {
 
       <section id="projetos" className="max-w-7xl mx-auto px-6 md:px-8 py-20">
         <h2 className="text-3xl font-bold mb-12 flex items-center gap-3">
-          <Code2 className="text-blue-500" /> Projetos em Destaque
+          <Files className="text-blue-500" /> Projetos em Destaque
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {projects.map((project) => (
