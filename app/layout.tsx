@@ -9,12 +9,12 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "João Pedro Aveiro | Desenvolvedor Full Stack",
+  title: "João Pedro Aveiro | Desenvolvedor Backend",
   description:
     "Estudante de Desenvolvimento de Sistemas, transformando ideias em código e aprendendo todos os dias a criar soluções digitais inteligentes.",
   openGraph: {
-    siteName: "João Pedro Aveiro | Desenvolvedor Full Stack",
-    title: "João Pedro Aveiro | Desenvolvedor Full Stack",
+    siteName: "João Pedro Aveiro | Desenvolvedor Backend",
+    title: "João Pedro Aveiro | Desenvolvedor Backend",
     description:
       "Estudante de Desenvolvimento de Sistemas, transformando ideias em código e aprendendo todos os dias a criar soluções digitais inteligentes.",
     images: {
