@@ -12,7 +12,8 @@ import {
   Cloud,
   Coffee,
   Computer,
-  Files
+  Files,
+  Gauge
 } from "lucide-react";
 
 export default function Home() {
@@ -44,18 +45,24 @@ export default function Home() {
       color: "text-blue-400",
       desc: "Modelagem SQL e NoSQL, consultas e busca por similaridade utilizando PGVector.",
     },
-    { 
-      name: "Docker & Cloud",
-      icon: <Cloud size={24} />,
-      color: "text-cyan-400",
-      desc: "Docker Compose, Containerização, GCP e DigitalOcean."
-    },
     {
       name: "Arquitetura & Design",
       icon: <Layers size={24} />,
       color: "text-purple-400",
-      desc: "SOLID, Clean Architecture, RESTful APIs, Microsserviços.",
+      desc: "SOLID, Clean Architecture, RESTful APIs, Microsserviços, Web Design UX/UI.",
     },
+    {
+      name: "Performance & Escalabilidade",
+      icon: <Gauge size={24}/>,
+      color: "text-orange-400",
+      desc: "Uso de cache utilizando Redis e sistemas de filas utilizando RabbitMQ."
+    },
+    { 
+      name: "Docker & Cloud",
+      icon: <Cloud size={24} />,
+      color: "text-cyan-400",
+      desc: "Docker & Docker Compose, Containerização, GCP e DigitalOcean."
+    }
   ];
 
   const projects = [
