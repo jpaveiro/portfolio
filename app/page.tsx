@@ -60,7 +60,7 @@ export default function Home() {
 
   const projects = [
     {
-      title: "Velo: Aplicativo para Ciclistas",
+      title: "Velo: Aplicativo para Ciclistas (2025)",
       tags: [
         "Java",
         "Spring Boot",
