@@ -60,7 +60,7 @@ export default function Home() {
 
   const projects = [
     {
-      title: "Velo",
+      title: "Velo: Aplicativo para Ciclistas",
       tags: [
         "Java",
         "Spring Boot",
@@ -70,6 +70,7 @@ export default function Home() {
         "Angular",
         "Swift",
         "Mobile",
+        "UI",
         "API",
         "Microsserviços",
         "REST",
@@ -79,21 +80,22 @@ export default function Home() {
       link: "https://github.com/velo-project/",
     },
     {
-      title: "BasicT-NG",
+      title: "BasicT-NG: WebApp PDV (2024)",
       tags: [
         "Java",
         "Spring Boot",
         "TypeScript",
         "Angular",
         "Monólito",
+        "UI",
         "API",
         "REST",
       ],
-      desc: "WebApp Ponto de Venda desenvolvido com Angular, SpringBoot e MySQL.",
+      desc: "WebApp Ponto de Venda com funções de venda, controle de estoque e cadastro de usuários.",
       link: "https://github.com/jpaveiro/BasicT-NG",
     },
     {
-      title: "Backend Challenge Itaú Unibanco",
+      title: "Backend Challenge Itaú Unibanco (2025)",
       tags: [
         "Desafio Backend",
         "Java",
