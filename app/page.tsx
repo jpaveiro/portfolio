@@ -1,5 +1,6 @@
 import Feats from "@/components/feats";
 import Navbar from "@/components/navbar";
+import ProjectCard from "@/components/project-card";
 import { GithubIcon, LinkedinIcon } from "@/components/ui/icon";
 import {
   Mail,
@@ -7,7 +8,6 @@ import {
   Database,
   Shield,
   Code2,
-  ExternalLink,
   Layers,
   Cloud,
   Coffee,
@@ -15,6 +15,7 @@ import {
   Files,
   Gauge
 } from "lucide-react";
+import Image from "next/image";
 
 export default function Home() {
   const iam = {
@@ -129,7 +130,7 @@ export default function Home() {
               <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
             </span>
             On-line
-          </div>
+          </div> 
 
           <h1 className="text-4xl md:text-6xl font-extrabold leading-tight">
             Codando o futuro com
@@ -162,7 +163,9 @@ export default function Home() {
         <div className="relative group w-64 h-64 md:w-96 md:h-96">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full blur-3xl opacity-20 group-hover:opacity-40 transition-opacity duration-500"></div>
           <div className="relative w-full h-full rounded-full overflow-hidden border-2 border-gray-800 bg-gray-900 shadow-2xl">
-            <img
+            <Image
+              width={500}
+              height={500}
               src={`${iam.github}.png`}
               alt={iam.name}
               className="w-full h-full object-cover"
@@ -211,51 +214,20 @@ export default function Home() {
 
       <Feats />
 
-      <section id="projetos" className="max-w-7xl mx-auto px-6 md:px-8 py-20">
-        <h2 className="text-3xl font-bold mb-12 flex items-center gap-3">
-          <Files className="text-blue-500" /> Projetos em Destaque
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {projects.map((project) => (
-            <div
-              key={project.title}
-              className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-900 to-black border border-gray-800 hover:border-blue-500/30 transition-all"
-            >
-              <div className="p-8">
-                <div className="flex justify-between items-start mb-4 gap-2">
-                  <div className="flex gap-2 flex-wrap max-w-[90%]">
-                    {project.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="px-4 py-1 text-xs font-medium rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-
-                  <ExternalLink
-                    size={20}
-                    className="text-gray-500 group-hover:text-white transition-colors shrink-0 w-5 h-5"
-                  />
-                </div>
-                <h3 className="text-2xl font-bold mb-3 group-hover:text-blue-400 transition-colors max-w-[90%]">
-                  {project.title}
-                </h3>
-                <p className="text-gray-400 mb-6 line-clamp-3">
-                  {project.desc}
-                </p>
-                <a
-                  href={project.link}
-                  className="inline-flex items-center text-sm font-semibold text-white hover:text-blue-400 transition-colors"
-                >
-                  Ver projeto <span className="ml-2">→</span>
-                </a>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
+    <section id="projetos" className="max-w-7xl mx-auto px-6 md:px-8 py-20">
+      <h2 className="text-3xl font-bold mb-12 flex items-center gap-3">
+        <Files className="text-blue-500" /> Projetos em Destaque
+      </h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {projects.map((project) => (
+          <ProjectCard
+            key={project.title}
+            project={project}
+            iam={iam}
+          />
+        ))}
+      </div>
+    </section>
 
       <footer
         id="contato"
