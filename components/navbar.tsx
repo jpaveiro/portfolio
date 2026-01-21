@@ -1,10 +1,10 @@
 'use client'
 import { Files, Home, Menu, Phone, Terminal, Trophy, X } from "lucide-react";
 import { useState } from "react";
-import { Props } from "./types/props";
+import { IamProps } from "./types/props";
 
 // TODO: Melhora do código
-export default function Navbar({iam}: Props) {
+export default function Navbar({iam}: IamProps) {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const navbarButtons = 

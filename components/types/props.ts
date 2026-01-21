@@ -1,5 +1,5 @@
 import { Iam } from "./iam";
 
-export interface Props {
+export interface IamProps {
     iam: Iam
 }
