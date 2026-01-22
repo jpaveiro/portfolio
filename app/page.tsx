@@ -117,77 +117,77 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#0a0a0a] text-gray-100 selection:bg-purple-500/30 overflow-x-hidden">
-    <Navbar iam={iam}></Navbar>
-      <main
-        id="início"
-        className="max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center justify-between mt-12 md:mt-24 px-6 md:px-8 gap-12 mb-32"
-      >
-        <section className="flex-1 space-y-6 text-center md:text-left">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-semibold uppercase tracking-wider mb-2">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
-            </span>
-            On-line
-          </div> 
+    <div className="flex-1 bg-[#0a0a0a]">
+      <Navbar iam={iam}/>
+      <div className="h-screen bg-[#0a0a0a] text-gray-100 selection:bg-purple-500/30 flex flex-col pt-20 md:pt-0">
+        <main
+          id="início"
+          className="flex-1 max-w-7xl mx-auto px-6 md:px-8 flex flex-col-reverse lg:flex-row items-center justify-center gap-12 lg:gap-20 "
+        >
+          <section className="flex-1 space-y-6 text-center md:text-left">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-semibold uppercase tracking-wider mb-2">
+              <div className="relative flex h-2 w-2">
+                <span className="animate-ping absolute rounded-full bg-blue-400 opacity-75"/>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"/>
+              </div>
+              On-line
+            </div> 
 
-          <h1 className="text-4xl md:text-6xl font-extrabold leading-tight">
-            Codando o futuro com
-            <br />
-            <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500 bg-clip-text text-transparent animate-pulse">
-              Criatividade & Inovação
-            </span>
-          </h1>
+            <h1 className="text-5xl md:text-7xl font-extrabold leading-tight">
+              👋 Olá! Eu sou<br/>
+              <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500 bg-clip-text text-transparent animate-pulse">
+                João Pedro Aveiro
+              </span>
+            </h1>
 
-          <p className="text-gray-400 text-lg max-w-xl mx-auto md:mx-0 leading-relaxed">
-            {iam.description}
-          </p>
+            <p className="text-xl text-gray-300/80 font-light mx-auto lg:mx-0 leading-relaxed tracking-wide">
+              {iam.description}
+            </p>
 
-          <div className="flex flex-col md:flex-row gap-4 pt-4 justify-center md:justify-start">
-            <a
-              href={iam.github}
-              className="px-8 py-3 rounded-lg bg-white text-black font-bold hover:bg-gray-200 transition-all flex items-center justify-center gap-2"
-            >
-              <GithubIcon size={20} /> GitHub
-            </a>
-            <a
-              href={iam.linkedin}
-              className="px-8 py-3 rounded-lg border border-gray-700 hover:border-purple-500 hover:bg-purple-500/10 transition-all font-semibold flex items-center justify-center gap-2"
-            >
-              <LinkedinIcon size={20} /> LinkedIn
-            </a>
+            <div className="flex flex-col md:flex-row gap-4 pt-8 justify-center md:justify-start">
+              <a
+                href={iam.github}
+                className="group relative px-8 py-4 bg-gradient-to-r from-white to-gray-500 text-black font-bold rounded-xl hover:shadow-xl hover:shadow-white/30 hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-3 font-mono text-sm tracking-wide overflow-hidden"
+              >
+                <GithubIcon size={20} /> GitHub
+              </a>
+              <a
+                href={iam.linkedin}
+                className="group relative px-8 py-4 bg-gradient-to-r from-white to-gray-500 text-black font-bold rounded-xl hover:shadow-xl hover:shadow-white/30 hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-3 font-mono text-sm tracking-wide overflow-hidden"
+              >
+                <LinkedinIcon size={20} /> LinkedIn
+              </a>
+            </div>
+          </section>
+
+          <div className="relative group w-64 h-64 md:w-96 md:h-96">
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full blur-3xl opacity-20 group-hover:opacity-40 transition-opacity duration-500"></div>
+            <div className="relative w-full h-full rounded-full overflow-hidden border-2 border-gray-800 bg-gray-900 shadow-2xl">
+              <Image
+                width={500}
+                height={500}
+                src={`${iam.github}.png`}
+                alt={iam.name}
+                className="w-full h-full object-cover"
+              />
+            </div>
+
+            <div className="absolute top-0 right-0 animate-bounce delay-700 bg-black/80 backdrop-blur p-3 rounded-2xl border border-gray-800 shadow-xl">
+              <Computer className="text-purple-400" size={24} />
+            </div>
+            <div className="absolute bottom-10 -left-4 animate-bounce delay-700 bg-black/80 backdrop-blur p-3 rounded-2xl border border-gray-800 shadow-xl">
+              <Coffee className="text-orange-400" size={24} />
+            </div>
           </div>
-        </section>
-
-        <div className="relative group w-64 h-64 md:w-96 md:h-96">
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full blur-3xl opacity-20 group-hover:opacity-40 transition-opacity duration-500"></div>
-          <div className="relative w-full h-full rounded-full overflow-hidden border-2 border-gray-800 bg-gray-900 shadow-2xl">
-            <Image
-              width={500}
-              height={500}
-              src={`${iam.github}.png`}
-              alt={iam.name}
-              className="w-full h-full object-cover"
-            />
-          </div>
-
-          <div className="absolute top-0 right-0 animate-bounce bg-black/80 backdrop-blur p-3 rounded-2xl border border-gray-800 shadow-xl">
-            <Computer className="text-purple-400" size={24} />
-          </div>
-          <div className="absolute bottom-10 -left-4 animate-bounce delay-700 bg-black/80 backdrop-blur p-3 rounded-2xl border border-gray-800 shadow-xl">
-            <Coffee className="text-orange-400" size={24} />
-          </div>
-        </div>
-      </main>
-
-      <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-800 to-transparent my-10"></div>
+        </main>
+        <div className="w-full h-px bg-gradient-to-r from-transparent via-purple-800 to-transparent my-10 animate-pulse"></div> 
+      </div>
 
       <section
         id="skills"
         className="max-w-7xl mx-auto px-6 md:px-8 py-20"
       >
-        <h2 className="text-3xl font-bold mb-12 flex items-center gap-3">
+        <h2 className="text-white text-3xl font-bold mb-12 flex items-center gap-3">
           <Terminal className="text-purple-500" /> Skills
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -215,7 +215,7 @@ export default function Home() {
       <Feats />
 
     <section id="projetos" className="max-w-7xl mx-auto px-6 md:px-8 py-20">
-      <h2 className="text-3xl font-bold mb-12 flex items-center gap-3">
+      <h2 className="text-white text-3xl font-bold mb-12 flex items-center gap-3">
         <Files className="text-blue-500" /> Projetos em Destaque
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
