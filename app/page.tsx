@@ -1,9 +1,9 @@
 import Feats from "@/components/feats";
+import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
 import ProjectCard from "@/components/project-card";
 import { GithubIcon, LinkedinIcon } from "@/components/ui/icon";
 import {
-  Mail,
   Terminal,
   Database,
   Shield,
@@ -18,52 +18,22 @@ import {
 import Image from "next/image";
 
 export default function Home() {
+
   const iam = {
     name: "João Pedro Aveiro",
     email: "jpaveiros@gmail.com",
     github: "https://github.com/jpaveiro",
     linkedin: "https://www.linkedin.com/in/jpaveiro/",
-    description:
-      "Técnico em Desenvolvimento de Sistemas, transformando ideias em código e aprendendo todos os dias a criar soluções digitais inteligentes.",
+    description: "Transformando idéias em código."
   };
 
   const techStack = [
-    {
-      name: "Linguagens & Frameworks",
-      icon: <Code2 size={24} />,
-      color: "text-red-400",
-      desc: "Java, TypeScript, C#, Python, Spring, ASP.NET Core, .NET MAUI, Angular e Next.js.",
-    },
-    {
-      name: "Redes & Cibersegurança",
-      icon: <Shield size={24} />,
-      color: "text-green-400",
-      desc: "Redes de computadores, boas práticas e fundamentos da segurança cibernética.",
-    },
-    {
-      name: "Banco de Dados",
-      icon: <Database size={24} />,
-      color: "text-blue-400",
-      desc: "Modelagem SQL e NoSQL, consultas e busca por similaridade utilizando PGVector.",
-    },
-    {
-      name: "Arquitetura & Design",
-      icon: <Layers size={24} />,
-      color: "text-purple-400",
-      desc: "SOLID, Clean Architecture, RESTful APIs, Microsserviços, Web Design UX/UI.",
-    },
-    {
-      name: "Performance & Escalabilidade",
-      icon: <Gauge size={24}/>,
-      color: "text-orange-400",
-      desc: "Uso de cache utilizando Redis e sistemas de filas utilizando RabbitMQ."
-    },
-    { 
-      name: "Docker & Cloud",
-      icon: <Cloud size={24} />,
-      color: "text-cyan-400",
-      desc: "Docker & Docker Compose, Containerização, GCP e DigitalOcean."
-    }
+    { name: "Linguagens & Frameworks", icon: <Code2 size={24} />, color: "text-red-400", desc: "Java, TypeScript, C#, Python, Spring, ASP.NET Core, .NET MAUI, Angular e Next.js." },
+    { name: "Redes & Cibersegurança", icon: <Shield size={24} />, color: "text-green-400", desc: "Redes de computadores, boas práticas e fundamentos da segurança cibernética." },
+    { name: "Banco de Dados", icon: <Database size={24} />, color: "text-blue-400", desc: "Modelagem SQL e NoSQL, consultas e busca por similaridade utilizando PGVector." },
+    { name: "Arquitetura & Design", icon: <Layers size={24} />, color: "text-purple-400", desc: "SOLID, Clean Architecture, RESTful APIs, Microsserviços, Web Design UX/UI." },
+    { name: "Performance & Escalabilidade", icon: <Gauge size={24}/>, color: "text-orange-400", desc: "Uso de cache utilizando Redis e sistemas de filas utilizando RabbitMQ." },
+    { name: "Docker & Cloud", icon: <Cloud size={24} />, color: "text-cyan-400", desc: "Docker & Docker Compose, Containerização, GCP e DigitalOcean." }
   ];
 
   const projects = [
@@ -122,27 +92,23 @@ export default function Home() {
       <div className="h-screen bg-[#0a0a0a] text-gray-100 selection:bg-purple-500/30 flex flex-col pt-20 md:pt-0">
         <main
           id="início"
-          className="flex-1 max-w-7xl mx-auto px-6 md:px-8 flex flex-col-reverse lg:flex-row items-center justify-center gap-12 lg:gap-20 "
+          className="flex-1 max-w-7xl mx-auto px-6 md:px-8 flex flex-col-reverse lg:flex-row items-center justify-center gap-12 lg:gap-20"
         >
           <section className="flex-1 space-y-6 text-center md:text-left">
+            <h1 className="text-5xl md:text-7xl font-extrabold leading-tight m-0">
+              João Pedro Aveiro
+            </h1>
+            <h2 className="text-4xl font-bold bg-gradient-to-r from-blue-500 via-purple-400 to-cyan-500 bg-clip-text text-transparent animate-pulse">
+              Full Stack Developer
+            </h2>
+            
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-semibold uppercase tracking-wider mb-2">
               <div className="relative flex h-2 w-2">
-                <span className="animate-ping absolute rounded-full bg-blue-400 opacity-75"/>
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"/>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"/>
               </div>
               On-line
             </div> 
-
-            <h1 className="text-5xl md:text-7xl font-extrabold leading-tight">
-              👋 Olá! Eu sou<br/>
-              <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500 bg-clip-text text-transparent animate-pulse">
-                João Pedro Aveiro
-              </span>
-            </h1>
-
-            <p className="text-xl text-gray-300/80 font-light mx-auto lg:mx-0 leading-relaxed tracking-wide">
-              {iam.description}
-            </p>
 
             <div className="flex flex-col md:flex-row gap-4 pt-8 justify-center md:justify-start">
               <a
@@ -172,11 +138,11 @@ export default function Home() {
               />
             </div>
 
-            <div className="absolute top-0 right-0 animate-bounce delay-700 bg-black/80 backdrop-blur p-3 rounded-2xl border border-gray-800 shadow-xl">
-              <Computer className="text-purple-400" size={24} />
+            <div className="absolute top-10 right-0 animate-bounce delay-700 bg-black/80 backdrop-blur p-3 rounded-2xl border border-gray-800 shadow-xl">
+              <Computer className="text-white" size={24} />
             </div>
             <div className="absolute bottom-10 -left-4 animate-bounce delay-700 bg-black/80 backdrop-blur p-3 rounded-2xl border border-gray-800 shadow-xl">
-              <Coffee className="text-orange-400" size={24} />
+              <Coffee className="text-purple-400" size={24} />
             </div>
           </div>
         </main>
@@ -229,45 +195,8 @@ export default function Home() {
       </div>
     </section>
 
-      <footer
-        id="contato"
-        className="border-t border-gray-800 bg-black/50 mt-20"
-      >
-        <div className="max-w-7xl mx-auto px-6 py-12 md:flex items-center justify-between">
-          <div className="mb-6 md:mb-0">
-            <h2 className="text-2xl font-bold text-white mb-2">
-              Tem um projeto em mente?
-            </h2>
-            <p className="text-gray-400">
-              Sempre aberto a novas oportunidades e desafios em backend.
-            </p>
-          </div>
-
-          <div className="flex gap-6">
-            <a
-              href={iam.linkedin}
-              className="p-3 rounded-full bg-gray-900 text-gray-400 hover:text-white hover:bg-blue-600 transition-all"
-            >
-              <LinkedinIcon size={24} />
-            </a>
-            <a
-              href={iam.github}
-              className="p-3 rounded-full bg-gray-900 text-gray-400 hover:text-white hover:bg-purple-600 transition-all"
-            >
-              <GithubIcon size={24} />
-            </a>
-            <a
-              href={`mailto:${iam.email}`}
-              className="p-3 rounded-full bg-gray-900 text-gray-400 hover:text-white hover:bg-green-600 transition-all"
-            >
-              <Mail size={24} />
-            </a>
-          </div>
-        </div>
-        <div className="text-center py-6 text-gray-600 text-sm border-t border-gray-900">
-          © 2025 João Pedro Aveiro. Desenvolvido com Next.js & Tailwind.
-        </div>
-      </footer>
+    <Footer iam={iam}/>
+    
     </div>
   );
 }
