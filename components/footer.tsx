@@ -18,7 +18,7 @@ export default function Footer({iam} : FooterProps) {
                         Tem um projeto em mente?
                     </h2>
                     <p className="text-gray-400">
-                        Sempre aberto a novas oportunidades e desafios em backend.
+                        Sempre aberto a novas oportunidades e desafios.
                     </p>
                 </div>
 
@@ -36,8 +36,8 @@ export default function Footer({iam} : FooterProps) {
                         <GithubIcon size={24} />
                     </a>
                     <a
-                      href={`mailto:${iam.email}`}
-                       className="p-3 rounded-full bg-gray-900 text-gray-400 hover:text-white hover:bg-green-600 transition-all"
+                        href={`mailto:${iam.email}`}
+                        className="p-3 rounded-full bg-gray-900 text-gray-400 hover:text-white hover:bg-green-600 transition-all"
                     >
                     <Mail size={24} />
                     </a>
