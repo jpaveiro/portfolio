@@ -30,7 +30,7 @@ export default function Feats() {
 
   return (
     <section id="conquistas" className="max-w-7xl mx-auto px-6 md:px-8 py-20">
-      <h2 className="text-3xl font-bold mb-12 flex items-center gap-3">
+      <h2 className="text-white text-3xl font-bold mb-12 flex items-center gap-3">
         <Trophy className="text-yellow-400" />
         Conquistas
       </h2>
