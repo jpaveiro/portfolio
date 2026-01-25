@@ -11,21 +11,21 @@ export default function Feats() {
       badge: "Destaque",
     },
     {
+      title: "0b11 | Maratona de Programação Layers",
+      highlight: "2º Lugar | 2026",
+      desc: "Vice-Campeão da Maratona de Programação Layers 2026, focada em desafios de programação, cybersecurity e enigmas com esteganografia para resolver problemas reais em equipe.",
+      icon: <Target size={22} />,
+      color: "text-red-400",
+      badge: "Competitiva",
+    },
+    {
       title: "ETEC Prof. Horácio Augusto da Silveira",
       highlight: "Destaque acadêmico",
       desc: "Destaque acadêmico em Desenvolvimento de Sistemas com excelência em projetos práticos e notas máximas na maioria das matérias relacionadas ao curso.",
       icon: <School size={22} />,
       color: "text-blue-400",
       badge: "Acadêmica",
-    },
-    {
-      title: "Hackathons & Competições",
-      highlight: "Em breve",
-      desc: "Participação em hackathons e maratonas de programação focadas em backend e segurança para resolver desafios reais em equipe.",
-      icon: <Target size={22} />,
-      color: "text-red-400",
-      badge: "Em breve",
-    },
+    }
   ];
 
   return (
