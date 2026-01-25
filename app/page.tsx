@@ -116,12 +116,9 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#0a0a0a] text-gray-100 selection:bg-purple-500/30 overflow-x-hidden">
+    <div id="início" className="min-h-screen bg-[#0a0a0a] text-gray-100 selection:bg-purple-500/30 overflow-x-hidden">
     <Navbar iam={iam}></Navbar>
-      <main
-        id="início"
-        className="max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center justify-between mt-12 md:mt-24 px-6 md:px-8 gap-12 mb-32"
-      >
+      <main className="max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center justify-between mt-12 md:mt-24 px-6 md:px-8 gap-12 mb-32">
         <section className="flex-1 space-y-6 text-center md:text-left">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-semibold uppercase tracking-wider mb-2">
             <span className="relative flex h-2 w-2">
@@ -221,7 +218,7 @@ export default function Home() {
               key={project.title}
               className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-900 to-black border border-gray-800 hover:border-blue-500/30 transition-all"
             >
-              <div className="p-8">
+              <div className="p-8 flex flex-col h-full">
                 <div className="flex justify-between items-start mb-4 gap-2">
                   <div className="flex gap-2 flex-wrap max-w-[90%]">
                     {project.tags.map((tag) => (
@@ -242,12 +239,12 @@ export default function Home() {
                 <h3 className="text-2xl font-bold mb-3 group-hover:text-blue-400 transition-colors max-w-[90%]">
                   {project.title}
                 </h3>
-                <p className="text-gray-400 mb-6 line-clamp-3">
+                <p className="text-gray-400 mb-6 line-clamp-3 flex-1">
                   {project.desc}
                 </p>
                 <a
                   href={project.link}
-                  className="inline-flex items-center text-sm font-semibold text-white hover:text-blue-400 transition-colors"
+                  className="inline-flex items-center text-sm font-semibold text-white hover:text-blue-400 transition-colors mt-auto"
                 >
                   Ver projeto <span className="ml-2">→</span>
                 </a>
