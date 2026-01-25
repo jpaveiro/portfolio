@@ -1,10 +1,10 @@
 'use client'
 import { Files, Home, Menu, Phone, Terminal, Trophy, X } from "lucide-react";
 import { useState } from "react";
-import { IamProps } from "./types/props";
+import { Props } from "./types/props";
 
 // TODO: Melhora do código
-export default function Navbar({iam}: IamProps) {
+export default function Navbar({iam}: Props) {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const navbarButtons = 
@@ -34,12 +34,12 @@ export default function Navbar({iam}: IamProps) {
       }
     ]
     return (
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0a0a0a]/95 background-blur-md">
+      <nav className="sticky top-0 z-50 backdrop-blur-md bg-black/50 border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <div className="flex items-center justify-between py-4">
             <div className="flex items-center gap-2">
               <Terminal size={20} className="text-purple-500 flex-shrink-0" />
-              <h1 className="text-xl text-white font-bold tracking-tighter hover:text-purple-400 transition-colors cursor-pointer">
+              <h1 className="text-xl font-bold tracking-tighter hover:text-purple-400 transition-colors cursor-pointer">
                 {iam.name}
               </h1>
             </div>
