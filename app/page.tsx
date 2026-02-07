@@ -118,7 +118,7 @@ export default function Home() {
   return (
     <div id="início" className="min-h-screen bg-[#0a0a0a] text-gray-100 selection:bg-purple-500/30 overflow-x-hidden">
     <Navbar iam={iam}></Navbar>
-      <main className="max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center justify-between mt-12 md:mt-24 px-6 md:px-8 gap-12 mb-32">
+      <main className="max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center justify-between pt-20 mt-20 md:pt-0 md:mt-50 px-6 md:px-8 gap-12 mb-32">
         <section className="flex-1 space-y-6 text-center md:text-left">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-semibold uppercase tracking-wider mb-2">
             <span className="relative flex h-2 w-2">
