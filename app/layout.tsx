@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { GoogleAnalytics } from '@next/third-parties/google'
+import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
+import LayoutClient from "@/components/layout-client";
 
 const inter = Inter({
   weight: ["400", "700"],
-  subsets: ["latin"]
+  subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
@@ -51,7 +52,7 @@ export default function RootLayout({
         />
         <link rel="manifest" href="/site.webmanifest" />
       </head>
-      <body className={`${inter.className} antialiased`}>{children}</body>
+      <body className={`${inter.className} antialiased`}><LayoutClient>{children}</LayoutClient></body>
       <GoogleAnalytics gaId={`${apiUrl}`}/>
     </html>
   );
